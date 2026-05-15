@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5.20 - I Love You</title>
+<title>5.20 - 静静</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -19,7 +19,7 @@ html{scroll-behavior:smooth}
 @keyframes blink{50%{border-color:transparent}}
 @keyframes glow{0%,100%{text-shadow:0 0 10px rgba(233,30,99,0.3),0 0 20px rgba(233,30,99,0.1)}50%{text-shadow:0 0 20px rgba(233,30,99,0.6),0 0 40px rgba(233,30,99,0.3)}}
 @keyframes ripple{0%{transform:scale(1);opacity:0.4}100%{transform:scale(2.5);opacity:0}}
-@keyframes rotateHeart{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes nameFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
 body{
   font-family:'Georgia','STSong','SimSun','Songti SC',serif;
@@ -69,7 +69,7 @@ body{
   background-image:url('generated_image_520_rose_heart.png');
   background-size:cover;
   background-position:center;
-  opacity:0.15;
+  opacity:0.12;
   filter:blur(2px);
 }
 
@@ -96,7 +96,7 @@ body{
 .hero-heart-wrap{
   position:relative;
   display:inline-block;
-  margin:24px 0;
+  margin:16px 0 8px;
   cursor:pointer;
   animation:fadeInUp 1s ease 0.4s both;
 }
@@ -117,6 +117,18 @@ body{
   border:2px solid #ff4070;
   border-radius:50%;
   animation:ripple 2s ease-out infinite;
+}
+
+/* ===== "静静" Name above Heart ===== */
+.hero-name{
+  font-size:clamp(1.6rem,5vw,2.6rem);
+  color:#c2185b;
+  letter-spacing:16px;
+  margin-bottom:4px;
+  animation:fadeInUp 1s ease 0.3s both, nameFloat 3s ease-in-out infinite 1s;
+  text-indent:16px;
+  font-weight:normal;
+  text-shadow:0 2px 12px rgba(233,30,99,0.2);
 }
 
 .hero-title{
@@ -528,6 +540,8 @@ body{
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-date">5 . 2 0</div>
+    <!-- "静静" 二字，在爱心正上方 -->
+    <div class="hero-name">静静</div>
     <div class="hero-heart-wrap" id="heroHeart" onclick="burstHearts(event)">
       <div class="ripple"></div>
       <div class="ripple" style="animation-delay:0.7s"></div>
@@ -556,7 +570,7 @@ body{
     <div class="letter-card">
       <h2 class="letter-heading">&#9993; A Letter For You</h2>
       <div class="letter-body">
-        <p>Dear You,</p>
+        <p>静静：</p>
         <p>在这个属于爱的日子里，我想把心底最柔软的话说给你听。遇见你，是我这辈子最幸运的事。你的笑容像五月的阳光，温暖而明亮，照亮了我所有的平凡日子。</p>
         <p>喜欢你看我时眼里的光，喜欢你牵手时掌心的温度，喜欢你说的每一句"没关系"。和你在一起的日子，连风都是甜的。</p>
         <p>世界很大，但我只想躲在你身旁。余生很长，我只想和你一起走。520，不仅仅是一个数字，更是我对你说不尽的"我爱你"。</p>
@@ -576,19 +590,19 @@ body{
         <div class="timeline-dot"></div>
         <div class="timeline-date">First Sight</div>
         <div class="timeline-title">When I First Saw You</div>
-        <div class="timeline-desc">茫茫人海中，第一眼就认定了你。心跳加速的感觉，至今记忆犹新。</div>
+        <div class="timeline-desc">直到今日，第一次见你的样子依然深深的刻在我的脑海里，那件粉色卫衣，那个可爱的你。</div>
       </div>
       <div class="timeline-item" data-delay="100">
         <div class="timeline-dot" style="background:#ff80ab;box-shadow:0 0 0 3px #ffb6c1"></div>
         <div class="timeline-date">First Date</div>
         <div class="timeline-title">Our First Date</div>
-        <div class="timeline-desc">紧张到说不出话，却因为你的一句玩笑，突然就放松了。那天晚上的风，好温柔。</div>
+        <div class="timeline-desc">第一次一起吃的火锅，那份决定命运的排骨，依然是我脑海中深深的回忆。</div>
       </div>
       <div class="timeline-item" data-delay="200">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Everyday</div>
         <div class="timeline-title">Everyday With You</div>
-        <div class="timeline-desc">一起吃的每一顿饭，一起走的每一条路，一起看的每一场电影，都是最珍贵的宝藏。</div>
+        <div class="timeline-desc">一起吃的每一顿饭，一起走的每一条路，一起看的每一场风景，都是最珍贵的宝藏。</div>
       </div>
       <div class="timeline-item" data-delay="300">
         <div class="timeline-dot" style="background:#ff80ab;box-shadow:0 0 0 3px #ffb6c1"></div>
@@ -665,13 +679,13 @@ body{
       用余生所有的温柔，<br>
       换你一世笑颜如花。
     </div>
-    <span class="promise-highlight">520, I Love You Forever.</span>
+    <span class="promise-highlight">520, 静静，I Love You Forever.</span>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <p>Made with <span class="footer-heart">&#10084;</span> just for you</p>
+  <p>Made with <span class="footer-heart">&#10084;</span> for <span style="color:#ff80ab">静静</span></p>
   <p style="margin-top:8px;opacity:0.5">5.20 - A day to celebrate love</p>
 </footer>
 
